@@ -10,9 +10,12 @@ function AccountOperations() {
   const [currency, setCurrency] = useState("USD");
 
   const dispatch = useDispatch();
-  const { balance, currentLoan, currentLoanPurpose, isLoading } = useSelector(
-    (state) => state.account
-  );
+  const {
+    balance,
+    loan: currentLoan,
+    loanPurpose: currentLoanPurpose,
+    isLoading,
+  } = useSelector((state) => state.account);
 
   console.log(balance);
   console.log(currency);
